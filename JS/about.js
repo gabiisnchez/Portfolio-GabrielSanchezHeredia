@@ -1,7 +1,7 @@
-// Selección de la sección "About"
+// Selecting the "About" section
 const aboutSection = document.querySelector('.about-section');
 
-// Mostrar la sección con efecto al hacer scroll
+// Show section with scroll effect
 window.addEventListener('scroll', () => {
     const sectionTop = aboutSection.getBoundingClientRect().top;
     const triggerPoint = window.innerHeight - 100;
@@ -11,7 +11,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Scroll suave al pulsar la flecha
+// Smooth scrolling when pressing the arrow
 const scrollDownBtn = document.querySelector('.scroll-down');
 if (scrollDownBtn) {
     scrollDownBtn.addEventListener('click', () => {
