@@ -1,13 +1,3 @@
-
-
-// NAV - Botón hamburguesa
-const btnHamburger = document.getElementById("btn-hamburger");
-const navMenu = document.getElementById("nav-menu");
-
-btnHamburger.addEventListener("click", () => {
-    navMenu.classList.toggle("show");
-});
-
 // HERO - Reducir título con scroll
 const hero = document.getElementById("hero-certificates");
 const heroTitle = hero.querySelector("h1");
