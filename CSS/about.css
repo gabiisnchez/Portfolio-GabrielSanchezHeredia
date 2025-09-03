@@ -1,10 +1,11 @@
-/* Basic Reset */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body */
 body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
@@ -40,7 +41,24 @@ body {
 
 .nav a:hover,
 .nav a.active {
-    color: #4CAF50; /* verde */
+    color: #4CAF50;
+}
+
+/* Hamburger (smartphones) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
 }
 
 /* Intro Section */
