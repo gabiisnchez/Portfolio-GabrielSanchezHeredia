@@ -1,4 +1,4 @@
-// HERO - Reducir título con scroll
+// HERO - Reduce title with scroll
 const hero = document.getElementById("hero-certificates");
 const heroTitle = hero.querySelector("h1");
 
@@ -14,7 +14,7 @@ window.addEventListener("scroll", () => {
     }
 });
 
-// GRID - Fade-in al hacer scroll
+// GRID - Fade-in on scroll
 const gridSection = document.getElementById("certificates-grid");
 
 const observer = new IntersectionObserver(
