@@ -14,7 +14,9 @@
     <header class="header">
         <div class="header-container">
             <div class="icon"></div>
-            <nav class="nav" id="nav-menu">
+
+            <!-- Nav escritorio -->
+            <nav class="nav" id="nav-menu-desktop">
                 <ul>
                     <li><a href="../index.html">Inicio</a></li>
                     <li><a href="certificates.html">Certificados</a></li>
@@ -23,11 +25,23 @@
                 </ul>
             </nav>
         </div>
+
+        <!-- Botón hamburguesa -->
         <button class="hamburger" id="btn-hamburger" aria-label="Abrir menú de navegación">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
         </button>
+        
+        <!-- Overlay menú móvil -->
+        <nav class="nav overlay" id="nav-menu">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="certificates.html">Certificados</a></li>
+                <li><a href="about.html">Sobre mí</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
 
     <!-- Hero Section -->
@@ -344,6 +358,7 @@
         </div>
     </footer>
 
+    <script src="../JS/main.js"></script>
     <script src="../JS/certificates.js"></script>
 </body>
 </html>

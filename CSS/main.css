@@ -13,7 +13,7 @@ body {
     background-color: #f9f9f9;
 }
 
-/* Navigation bar */
+/* Header / Navigation */
 .header {
     display: flex;
     justify-content: space-between;
@@ -23,7 +23,7 @@ body {
     color: #fff;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 3000;
 }
 
 .header-container {
@@ -33,16 +33,22 @@ body {
     width: 100%;
 }
 
-.nav ul {
-    list-style: none;
+/* Nav escritorio */
+.nav#nav-menu-desktop {
+    display: flex;
+}
+
+.nav#nav-menu-desktop ul {
+    list-style: none; /* eliminar puntos */
+    margin: 0;
+    padding: 0;
     display: flex;
     gap: 20px;
     justify-content: center;
     align-items: center;
-    margin: 0;
-    padding: 0;
 }
 
+/* Estilo común para todos los enlaces nav */
 .nav a {
     position: relative;
     color: #fff;
@@ -67,7 +73,7 @@ body {
     width: 100%;
 }
 
-/* Hamburger (smartphones) */
+/* Hamburger button */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -75,7 +81,8 @@ body {
     background: none;
     border: none;
     cursor: pointer;
-    z-index: 1500;
+    position: relative;
+    z-index: 3100;
 }
 
 .hamburger .bar {
@@ -83,6 +90,57 @@ body {
     height: 3px;
     background: white;
     border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Overlay menú móvil */
+.nav.overlay {
+    display: none; /* oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(17,17,17,0.95);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(100%);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.nav.overlay.show {
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+}
+
+.nav.overlay ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+}
+
+.nav.overlay a {
+    color: #fff;       /* asegurar color blanco */
+    font-size: 1.8rem; /* tamaño mayor para móvil */
 }
 
 /* Footer */
@@ -111,66 +169,13 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
-    /* Ocultar menú normal */
-    .nav {
+    /* Ocultar nav escritorio */
+    .nav#nav-menu-desktop {
         display: none;
     }
 
-    /* Mostrar hamburguesa en móvil */
+    /* Mostrar hamburguesa */
     .hamburger {
         display: flex;
-    }
-
-    /* Overlay móvil */
-    .nav.overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(17,17,17,0.95);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        z-index: 2000;
-        opacity: 0;
-        pointer-events: none;
-        transform: translateX(100%);
-        transition: transform 0.4s ease, opacity 0.4s ease;
-    }
-
-    .nav.overlay.show {
-        opacity: 1;
-        pointer-events: auto;
-        transform: translateX(0);
-    }
-
-    .nav.overlay ul {
-        flex-direction: column;
-        gap: 30px;
-        text-align: center;
-    }
-
-    .nav.overlay a {
-        font-size: 1.8rem;
-    }
-
-    .nav-overlay-close {
-        position: absolute;
-        top: 25px;
-        right: 25px;
-        background: none;
-        border: none;
-        font-size: 2rem;
-        color: white;
-        cursor: pointer;
-        line-height: 1;
-        padding: 0;
-        transition: color 0.3s ease;
-    }
-
-    .nav-overlay-close:hover {
-        color: #4CAF50;
     }
 }
