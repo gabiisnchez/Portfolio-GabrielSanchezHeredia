@@ -36,7 +36,7 @@ body {
 
 /* User icon (mobile only) */
 .icon {
-    display: none; /* hidden on desktop */
+    display: none;
 }
 
 /* Desktop navigation */
@@ -117,7 +117,7 @@ body {
     width: 100%;
     height: 100%;
     background: rgba(17,17,17,0.95);
-    display: flex; /* always keep flex */
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -214,8 +214,8 @@ body {
         justify-content: center;
         font-size: 20px;
         color: white;
-        margin-right: 15px; /* space between icon and hamburger */
-        order: -1; /* forces it to appear on the left side of header */
+        margin-right: 15px;
+        order: -1;
         flex-shrink: 0;
         flex-grow: 0;
     }
@@ -223,7 +223,7 @@ body {
     /* Align everything to the left */
     .header {
         justify-content: flex-start;
-        gap: 10px; /* space between icon, nav container and hamburger */
+        gap: 10px;
     }
 
     /* Font Awesome icon inside the div */
