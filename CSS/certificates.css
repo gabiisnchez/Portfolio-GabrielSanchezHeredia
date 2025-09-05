@@ -1,7 +1,7 @@
 /* Hero Section */
 #hero-certificates {
     height: 50vh;
-    background: #000;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0,0,0,0.8)), url('../SOURCES/IMAGES/certificates-background.jpg') center/cover no-repeat;
     color: white;
     display: flex;
     justify-content: center;
@@ -59,7 +59,8 @@
 
 /* Certificate Card */
 .cert-card {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -72,8 +73,8 @@
 }
 
 .cert-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.18);
 }
 
 .cert-card h3 {
@@ -128,5 +129,12 @@
 
     #hero-certificates h1 {
         font-size: 2rem;
+    }
+
+    /* Botones visibles en móvil */
+    .btn-cert {
+        opacity: 1;
+        pointer-events: auto;
+        transform: none;
     }
 }
