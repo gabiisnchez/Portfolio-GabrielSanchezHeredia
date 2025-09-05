@@ -85,7 +85,7 @@
 
 .cert-card .issuer {
     font-size: 0.95rem;
-    color: #4CAF50; /* Verde */
+    color: #4CAF50;
     font-weight: 500;
 }
 
@@ -121,7 +121,7 @@
     background: #45a049;
 }
 
-/* Responsive específico para Hero y Grid */
+/* Responsive for Hero y Grid */
 @media (max-width: 768px) {
     .grid-container {
         grid-template-columns: 1fr;
@@ -131,7 +131,7 @@
         font-size: 2rem;
     }
 
-    /* Botones visibles en móvil */
+    /* Buttons visible on mobile */
     .btn-cert {
         opacity: 1;
         pointer-events: auto;
