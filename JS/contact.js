@@ -8,7 +8,7 @@ window.addEventListener("scroll", () => {
 
     if (scrollY < heroHeight) {
         let scale = 1 - scrollY / (heroHeight * 1.5);
-        scale = Math.max(scale, 0.6); // minimum scale limit
+        scale = Math.max(scale, 0.6);
         heroTitle.style.transform = `scale(${scale})`;
         heroTitle.style.opacity = 1 - scrollY / heroHeight;
     }
@@ -19,7 +19,7 @@ const form = document.getElementById('contact-form');
 const successMessage = document.getElementById('success-message');
 
 form.addEventListener('submit', function(e) {
-    e.preventDefault(); // prevent default form submission
+    e.preventDefault();
 
     // Backend / email API integration would go here
 
