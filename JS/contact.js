@@ -26,6 +26,12 @@ const successMessage = document.getElementById('success-message');
 form.addEventListener('submit', function(e) {
     e.preventDefault();
 
+    // Validation of required fields
+    if (!form.name.value.trim() || !form.email.value.trim() || !form.message.value.trim()) {
+        alert("Please fill in all required fields.");
+        return;
+    }
+
     // Send form using EmailJS
     emailjs.sendForm("service_ld75pqo", "template_hqv01x4", this)
         .then(() => {
