@@ -18,20 +18,30 @@ window.addEventListener("scroll", () => {
 const form = document.getElementById('contact-form');
 const successMessage = document.getElementById('success-message');
 
+// Initialize EmailJS with your Public Key
+(function() {
+    emailjs.init("bbLmmsXQKYqsLA704");
+})();
+
 form.addEventListener('submit', function(e) {
     e.preventDefault();
 
-    // Backend / email API integration would go here
+    // Send form using EmailJS
+    emailjs.sendForm("service_ld75pqo", "template_hqv01x4", this)
+        .then(() => {
+            // Show success message with animation
+            successMessage.classList.add('show');
 
-    // Show success message
-    successMessage.style.display = 'block';
+            // Hide message after 4 seconds
+            setTimeout(() => {
+                successMessage.classList.remove('show');
+            }, 4000);
 
-    // Hide message after 4 seconds
-    setTimeout(() => {
-        successMessage.style.display = 'none';
-    }, 4000);
-
-    // Reset form fields
-    form.reset();
+            // Reset form fields
+            form.reset();
+        })
+        .catch((error) => {
+            // Show alert if there is an error sending the email
+            alert("❌ Error al enviar: " + JSON.stringify(error));
+        });
 });
-
