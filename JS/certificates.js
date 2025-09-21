@@ -1,4 +1,4 @@
-// HERO - Reduce title with scroll
+// HERO - Reduce title size on scroll
 const hero = document.getElementById("hero-certificates");
 const heroTitle = hero.querySelector("h1");
 
