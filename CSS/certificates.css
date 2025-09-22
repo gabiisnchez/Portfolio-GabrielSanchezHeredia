@@ -96,11 +96,11 @@
 }
 
 .folder-card .card-icon {
-    color: #f39c12; /* Color dorado para carpetas */
+    color: #27AE60;
 }
 
 .individual-card .card-icon {
-    color: #3498db; /* Color azul para certificados */
+    color: #16A085;
 }
 
 /* Text Content */
@@ -157,19 +157,19 @@
 
 /* Differentiate folder and individual card buttons */
 .folder-card .btn-cert {
-    background: #f39c12;
+    background: #27AE60;
 }
 
 .folder-card .btn-cert:hover {
-    background: #e67e22;
+    background: #229954;
 }
 
 .individual-card .btn-cert {
-    background: #3498db;
+    background: #16A085;
 }
 
 .individual-card .btn-cert:hover {
-    background: #2980b9;
+    background: #138D75;
 }
 
 /* Responsive for Hero y Grid */
