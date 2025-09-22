@@ -9,13 +9,11 @@
     text-align: center;
     position: relative;
 }
-
 #hero-certificates h1 {
     font-size: 3rem;
     font-weight: bold;
     position: relative;
 }
-
 #hero-certificates h1::after {
     content: "";
     display: block;
@@ -26,20 +24,27 @@
     border-radius: 2px;
 }
 
-/* Certificates Grid */
-#certificates-grid {
+/* Certificates Sections */
+#certificates-folders,
+#certificates-individual {
     padding: 60px 10%;
     text-align: center;
 }
 
-#certificates-grid h2 {
+#certificates-folders {
+    margin-bottom: 40px;
+}
+
+#certificates-folders h2,
+#certificates-individual h2 {
     font-size: 2rem;
     margin-bottom: 40px;
     color: #111;
     position: relative;
 }
 
-#certificates-grid h2::after {
+#certificates-folders h2::after,
+#certificates-individual h2::after {
     content: "";
     display: block;
     width: 80px;
@@ -66,9 +71,9 @@
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    min-height: 220px;
+    min-height: 280px;
     position: relative;
 }
 
@@ -77,22 +82,51 @@
     box-shadow: 0 8px 20px rgba(0,0,0,0.18);
 }
 
+/* Card Icons */
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.cert-card:hover .card-icon {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.folder-card .card-icon {
+    color: #f39c12; /* Color dorado para carpetas */
+}
+
+.individual-card .card-icon {
+    color: #3498db; /* Color azul para certificados */
+}
+
+/* Text Content */
 .cert-card h3 {
     font-size: 1.2rem;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
     color: #111;
+    text-align: center;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
 }
 
 .cert-card .issuer {
     font-size: 0.95rem;
     color: #4CAF50;
     font-weight: 500;
+    margin-bottom: 8px;
 }
 
 .cert-card .date {
     font-size: 0.85rem;
     color: #777;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 
 /* View Certificate Button */
@@ -121,16 +155,42 @@
     background: #45a049;
 }
 
+/* Differentiate folder and individual card buttons */
+.folder-card .btn-cert {
+    background: #f39c12;
+}
+
+.folder-card .btn-cert:hover {
+    background: #e67e22;
+}
+
+.individual-card .btn-cert {
+    background: #3498db;
+}
+
+.individual-card .btn-cert:hover {
+    background: #2980b9;
+}
+
 /* Responsive for Hero y Grid */
 @media (max-width: 768px) {
     .grid-container {
         grid-template-columns: 1fr;
     }
-
+    
     #hero-certificates h1 {
         font-size: 2rem;
     }
-
+    
+    #certificates-folders,
+    #certificates-individual {
+        padding: 40px 5%;
+    }
+    
+    .card-icon {
+        font-size: 2rem;
+    }
+    
     /* Buttons visible on mobile */
     .btn-cert {
         opacity: 1;
