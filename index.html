@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+    <title>Gabriel Sanchez Heredia - Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/index.css">
 </head>
 
 <body>
@@ -44,20 +45,349 @@
         </nav>
     </header>
 
-    
+    <main>
+        <!-- Hero Section -->
+        <section class="section hero" id="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>¡Hola! Soy <span class="highlight">Gabriel</span></h1>
+                    <p>Desarrollador apasionado por crear soluciones innovadoras y experiencias digitales excepcionales. Bienvenido a mi portfolio donde podrás conocer mi trabajo y trayectoria profesional.</p>
+                </div>
+                <div class="hero-image">
+                    <img src="https://via.placeholder.com/350x350/4CAF50/FFFFFF?text=Foto" alt="Gabriel Sanchez" class="profile-img">
+                </div>
+            </div>
+            <div class="scroll-indicator" onclick="scrollToNext()">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section about" id="about">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://via.placeholder.com/300x300/45a049/FFFFFF?text=Sobre+Mi" alt="Sobre mi" class="about-img">
+                </div>
+                <div class="about-text">
+                    <h2>Sobre mí</h2>
+                    <p>Soy un desarrollador con una sólida formación académica y una pasión genuina por la tecnología. Mi enfoque se centra en crear código limpio, eficiente y escalable, siempre buscando las mejores prácticas y las tecnologías más actuales.</p>
+                    <p>Mi experiencia abarca desde el desarrollo frontend con tecnologías modernas como React y Vue.js, hasta el backend con Node.js y Python. También tengo conocimientos en bases de datos, DevOps y metodologías ágiles.</p>
+                    <p>Creo firmemente en el aprendizaje continuo y en la colaboración en equipo. Cada proyecto es una oportunidad para crecer profesionalmente y aportar valor real a los usuarios finales.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Experience Section -->
+        <section class="section education-experience" id="education">
+            <div class="education-experience-content">
+                <h2>Formación y Experiencia</h2>
+                
+                <div class="two-columns">
+                    <div class="column">
+                        <h3>Formación Académica</h3>
+                        
+                        <div class="timeline-item">
+                            <h4>Grado en Ingeniería Informática</h4>
+                            <div class="institution">Universidad de Barcelona</div>
+                            <div class="date">2020 - 2024</div>
+                            <p>Especialización en Desarrollo de Software y Sistemas Distribuidos. Proyecto final centrado en aplicaciones web modernas.</p>
+                        </div>
+
+                        <div class="timeline-item">
+                            <h4>Máster en Desarrollo Web Full Stack</h4>
+                            <div class="institution">Instituto Tecnológico</div>
+                            <div class="date">2024 - Presente</div>
+                            <p>Profundización en tecnologías modernas de desarrollo web, arquitecturas cloud y metodologías ágiles.</p>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <h3>Experiencia Laboral</h3>
+                        
+                        <div class="timeline-item">
+                            <h4>Desarrollador Frontend Junior</h4>
+                            <div class="institution">TechStartup SL</div>
+                            <div class="date">Marzo 2024 - Presente</div>
+                            <p>Desarrollo de interfaces de usuario responsivas con React y TypeScript. Colaboración en equipo usando metodologías ágiles.</p>
+                        </div>
+
+                        <div class="timeline-item">
+                            <h4>Prácticas en Desarrollo Web</h4>
+                            <div class="institution">Digital Agency</div>
+                            <div class="date">Septiembre 2023 - Febrero 2024</div>
+                            <p>Desarrollo de sitios web corporativos y e-commerce. Experiencia con CMS y optimización SEO.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="download-cv">
+                    <a href="../CV/gabriel_sanchez_cv.pdf" target="_blank" class="btn-cv">
+                        <i class="fas fa-download"></i> Descargar CV
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section projects" id="projects">
+            <div class="projects-content">
+                <h2>Proyectos Destacados</h2>
+                
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>E-commerce Platform</h3>
+                            <div class="tech-tags">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">Stripe</span>
+                            </div>
+                            <p>Plataforma de comercio electrónico completa con carrito de compras, pasarela de pagos integrada, panel de administración y sistema de gestión de inventarios.</p>
+                            <a href="https://github.com/gabiisnchez/ecommerce-project" class="btn-project" target="_blank">
+                                Ver en GitHub <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Task Management App</h3>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Vue.js</span>
+                                <span class="tech-tag">Firebase</span>
+                                <span class="tech-tag">PWA</span>
+                            </div>
+                            <p>Aplicación web progresiva para gestión de tareas con funcionalidades offline, sincronización en tiempo real y notificaciones push.</p>
+                            <a href="https://github.com/gabiisnchez/task-manager" class="btn-project" target="_blank">
+                                Ver en GitHub <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Analytics Dashboard</h3>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Django</span>
+                                <span class="tech-tag">D3.js</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                            </div>
+                            <p>Dashboard interactivo para análisis de datos con visualizaciones dinámicas, filtros avanzados y exportación de reportes en múltiples formatos.</p>
+                            <a href="https://github.com/gabiisnchez/analytics-dashboard" class="btn-project" target="_blank">
+                                Ver en GitHub <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Weather Mobile App</h3>
+                            <div class="tech-tags">
+                                <span class="tech-tag">React Native</span>
+                                <span class="tech-tag">OpenWeather API</span>
+                                <span class="tech-tag">Redux</span>
+                            </div>
+                            <p>Aplicación móvil multiplataforma para consulta del tiempo con geolocalización, pronósticos extendidos y notificaciones de alertas meteorológicas.</p>
+                            <a href="https://github.com/gabiisnchez/weather-app" class="btn-project" target="_blank">
+                                Ver en GitHub <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommendations Section -->
+        <section class="recommendations" id="recommendations">
+            <h2>Recomendaciones</h2>
+            
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <!-- Primera serie de tarjetas -->
+                    <div class="recommendation-card">
+                        <div class="recommendation-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="recommendation-author">María González</div>
+                        <div class="recommendation-title">Senior Developer - TechCorp</div>
+                        <div class="recommendation-text">
+                            "Gabriel demostró gran capacidad técnica y habilidades de trabajo en equipo durante nuestro proyecto conjunto. Su código es limpio y bien documentado."
+                        </div>
+                    </div>
+
+                    <div class="recommendation-card">
+                        <div class="recommendation-avatar">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="recommendation-author">Dr. Carlos Martínez</div>
+                        <div class="recommendation-title">Profesor - Universidad de Barcelona</div>
+                        <div class="recommendation-text">
+                            "Excelente estudiante con gran dedicación. Su proyecto final fue uno de los más innovadores que he visto en años."
+                        </div>
+                    </div>
+
+                    <div class="recommendation-card">
+                        <div class="recommendation-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="recommendation-author">Ana López</div>
+                        <div class="recommendation-title">Tech Lead - InnovaTech</div>
+                        <div class="recommendation-text">
+                            "Gabriel tiene una mentalidad muy analítica y siempre encuentra soluciones creativas a problemas complejos. Muy recomendable."
+                        </div>
+                    </div>
+
+                    <div class="recommendation-card">
+                        <div class="recommendation-avatar">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="recommendation-author">Roberto Silva</div>
+                        <div class="recommendation-title">CTO - Digital Agency</div>
+                        <div class="recommendation-text">
+                            "Durante sus prácticas mostró gran capacidad de aprendizaje y adaptación. Su actitud proactiva lo hace destacar del resto."
+                        </div>
+                    </div>
+
+                    <div class="recommendation-card">
+                        <div class="recommendation-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="recommendation-author">Laura Fernández</div>
+                        <div class="recommendation-title">Product Manager - StartupXYZ</div>
+                        <div class="recommendation-text">
+                            "Trabajar con Gabriel ha sido una experiencia excelente. Su conocimiento técnico y su capacidad de comunicación son excepcionales."
+                        </div>
+                    </div>
+
+                    <div class="recommendation-card">
+                        <div class="recommendation-avatar">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <div class="recommendation-author">Prof. Elena Ruiz</div>
+                        <div class="recommendation-title">Profesora - Instituto Tecnológico</div>
+                        <div class="recommendation-text">
+                            "Gabriel mostró gran dedicación en mis clases de programación avanzada. Su comprensión de los conceptos complejos es impresionante."
+                        </div>
+                    </div>
+
+                    <div class="recommendation-card">
+                        <div class="recommendation-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="recommendation-author">Miguel Torres</div>
+                        <div class="recommendation-title">Senior Frontend Developer</div>
+                        <div class="recommendation-text">
+                            "Su capacidad para resolver problemas y su atención al detalle lo convierten en un desarrollador muy valioso para cualquier equipo."
+                        </div>
+                    </div>
+
+                    <!-- Segunda serie de tarjetas (duplicadas para el efecto infinito) -->
+                    <div class="recommendation-card">
+                        <div class="recommendation-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="recommendation-author">María González</div>
+                        <div class="recommendation-title">Senior Developer - TechCorp</div>
+                        <div class="recommendation-text">
+                            "Gabriel demostró gran capacidad técnica y habilidades de trabajo en equipo durante nuestro proyecto conjunto. Su código es limpio y bien documentado."
+                        </div>
+                    </div>
+
+                    <div class="recommendation-card">
+                        <div class="recommendation-avatar">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="recommendation-author">Dr. Carlos Martínez</div>
+                        <div class="recommendation-title">Profesor - Universidad de Barcelona</div>
+                        <div class="recommendation-text">
+                            "Excelente estudiante con gran dedicación. Su proyecto final fue uno de los más innovadores que he visto en años."
+                        </div>
+                    </div>
+
+                    <div class="recommendation-card">
+                        <div class="recommendation-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="recommendation-author">Ana López</div>
+                        <div class="recommendation-title">Tech Lead - InnovaTech</div>
+                        <div class="recommendation-text">
+                            "Gabriel tiene una mentalidad muy analítica y siempre encuentra soluciones creativas a problemas complejos. Muy recomendable."
+                        </div>
+                    </div>
+
+                    <div class="recommendation-card">
+                        <div class="recommendation-avatar">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="recommendation-author">Roberto Silva</div>
+                        <div class="recommendation-title">CTO - Digital Agency</div>
+                        <div class="recommendation-text">
+                            "Durante sus prácticas mostró gran capacidad de aprendizaje y adaptación. Su actitud proactiva lo hace destacar del resto."
+                        </div>
+                    </div>
+
+                    <div class="recommendation-card">
+                        <div class="recommendation-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="recommendation-author">Laura Fernández</div>
+                        <div class="recommendation-title">Product Manager - StartupXYZ</div>
+                        <div class="recommendation-text">
+                            "Trabajar con Gabriel ha sido una experiencia excelente. Su conocimiento técnico y su capacidad de comunicación son excepcionales."
+                        </div>
+                    </div>
+
+                    <div class="recommendation-card">
+                        <div class="recommendation-avatar">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <div class="recommendation-author">Prof. Elena Ruiz</div>
+                        <div class="recommendation-title">Profesora - Instituto Tecnológico</div>
+                        <div class="recommendation-text">
+                            "Gabriel mostró gran dedicación en mis clases de programación avanzada. Su comprensión de los conceptos complejos es impresionante."
+                        </div>
+                    </div>
+
+                    <div class="recommendation-card">
+                        <div class="recommendation-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="recommendation-author">Miguel Torres</div>
+                        <div class="recommendation-title">Senior Frontend Developer</div>
+                        <div class="recommendation-text">
+                            "Su capacidad para resolver problemas y su atención al detalle lo convierten en un desarrollador muy valioso para cualquier equipo."
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
         <p>&copy; 2025 Gabriel Sanchez Heredia. Todos los derechos reservados.</p>
-
-        <!-- Social Networks -->
         <div class="social-icons">
-        <a href="mailto:gabiisnchez@proton.me" title="Envíame un correo"><i class="fas fa-envelope"></i></a>
-        <a href="https://www.linkedin.com/in/gabrielsanher" target="_blank" title="Mi perfil de LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/gabiisnchez" target="_blank" title="Mi perfil de GitHub"><i class="fab fa-github"></i></a>
-    </div>
+            <a href="mailto:gabiisnchez@proton.me" title="Envíame un correo"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/gabrielsanher" target="_blank" title="Mi perfil de LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/gabiisnchez" target="_blank" title="Mi perfil de GitHub"><i class="fab fa-github"></i></a>
+        </div>
     </footer>
 
-    <script src="../JS/main.js"></script>
+    <script src="JS/main.js"></script>
+    <script src="JS/index.js"></script>
 </body>
 </html>
