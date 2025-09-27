@@ -4,8 +4,6 @@
     backdrop-filter: blur(10px);
 }
 
-
-
 /* Section base */
 .section {
     min-height: 100vh;
@@ -56,6 +54,18 @@
     margin-bottom: 20px;
     color: #111;
     font-weight: 700;
+    text-align: left;
+    position: relative;
+}
+
+.hero-text h1::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 4px;
+    background: #4CAF50;
+    margin: 15px 0 0 0;
+    border-radius: 2px;
 }
 
 .hero-text .highlight {
@@ -163,6 +173,18 @@
     font-size: 2.5rem;
     margin-bottom: 30px;
     color: #111;
+    text-align: center;
+    position: relative;
+}
+
+.about-text h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #4CAF50;
+    margin: 12px auto 0 auto;
+    border-radius: 2px;
 }
 
 .about-text p {
@@ -186,6 +208,17 @@
     text-align: center;
     margin-bottom: 60px;
     color: #111;
+    position: relative;
+}
+
+.education-experience h2::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: #4CAF50;
+    margin: 12px auto 0 auto;
+    border-radius: 2px;
 }
 
 .two-columns {
@@ -193,6 +226,13 @@
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     margin-bottom: 60px;
+    align-items: stretch;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .column h3 {
@@ -200,6 +240,17 @@
     margin-bottom: 30px;
     color: #111;
     text-align: center;
+    position: relative;
+}
+
+.column h3::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: #4CAF50;
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
 }
 
 .timeline-item {
@@ -210,6 +261,10 @@
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
     border-left: 4px solid #4CAF50;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .timeline-item:hover {
@@ -275,6 +330,17 @@
     text-align: center;
     margin-bottom: 60px;
     color: #111;
+    position: relative;
+}
+
+.projects h2::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: #4CAF50;
+    margin: 12px auto 0 auto;
+    border-radius: 2px;
 }
 
 .projects-grid {
@@ -315,6 +381,7 @@
     font-size: 1.5rem;
     margin-bottom: 15px;
     color: #111;
+    /* línea decorativa quitada */
 }
 
 .tech-tags {
@@ -367,6 +434,17 @@
     text-align: center;
     margin-bottom: 60px;
     color: #111;
+    position: relative;
+}
+
+.recommendations h2::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: #4CAF50;
+    margin: 12px auto 0 auto;
+    border-radius: 2px;
 }
 
 .carousel-container {
@@ -379,7 +457,7 @@
 .carousel-track {
     display: flex;
     animation: scroll 60s linear infinite;
-    width: calc(350px * 14); /* 7 cards * 2 duplicates */
+    width: calc(350px * 14);
 }
 
 @keyframes scroll {
@@ -449,6 +527,10 @@
 
     .hero-text h1 {
         font-size: 2.5rem;
+    }
+
+    .hero-text h1::after {
+        margin: 15px auto 0 auto;
     }
 
     .profile-img {
