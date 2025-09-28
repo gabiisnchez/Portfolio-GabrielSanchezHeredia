@@ -18,30 +18,44 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 40px;
+    padding: 25px 40px;
     background: #111;
     color: #fff;
     position: sticky;
     top: 0;
     z-index: 3000;
+    min-height: 80px;
 }
 
 /* Header container: desktop navigation */
 .header-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     width: 100%;
 }
 
-/* User icon (mobile only) */
+/* User icon */
 .icon {
-    display: none;
+    display: flex;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #ccc;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: white;
+    margin-right: 20px;
+    flex-shrink: 0;
+    flex-grow: 0;
 }
 
 /* Desktop navigation */
 .nav#nav-menu-desktop {
     display: flex;
+    width: 100%;
+    justify-content: flex-end;/
 }
 
 .nav#nav-menu-desktop ul {
@@ -49,8 +63,8 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 20px;
-    justify-content: center;
+    gap: 30px;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -59,15 +73,17 @@ body {
     position: relative;
     color: #fff;
     text-decoration: none;
-    font-weight: 500;
-    padding-bottom: 5px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding-bottom: 8px;
+    padding: 10px 15px;
 }
 
 .nav a::after {
     content: "";
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: 8px;
+    left: 15px;
     width: 0;
     height: 2px;
     background: #4CAF50;
@@ -76,10 +92,10 @@ body {
 
 .nav a:hover::after,
 .nav a.active::after {
-    width: 100%;
+    width: calc(100% - 30px);
 }
 
-/* Hamburger button */
+/* Hamburger button - MEJORADO */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -89,10 +105,11 @@ body {
     cursor: pointer;
     position: relative;
     z-index: 3100;
+    padding: 10px;
 }
 
 .hamburger .bar {
-    width: 25px;
+    width: 28px;
     height: 3px;
     background: white;
     border-radius: 2px;
@@ -148,7 +165,7 @@ body {
 
 .nav.overlay a {
     color: #fff;
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 
 .nav.overlay ul li {
@@ -203,27 +220,16 @@ body {
         display: flex;
     }
 
-    /* Show user icon only on mobile */
+    
     .icon {
-        display: flex;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background-color: #ccc;
-        align-items: center;
-        justify-content: center;
-        font-size: 20px;
-        color: white;
         margin-right: 15px;
-        order: -1;
-        flex-shrink: 0;
-        flex-grow: 0;
     }
 
-    /* Align everything to the left */
+    /* Align everything */
     .header {
-        justify-content: flex-start;
+        justify-content: space-between;
         gap: 10px;
+        padding: 20px 30px;
     }
 
     /* Font Awesome icon inside the div */
