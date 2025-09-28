@@ -362,15 +362,155 @@
     box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
-.project-image {
+.project-image1 {
     width: 100%;
     height: 200px;
-    background: linear-gradient(45deg, #4CAF50, #45a049);
+    background: whitesmoke;
+    background-image: url(../SOURCES/IMAGES/blank_urban_index.png);
+    background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     font-size: 3rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-image1 {
+    transform: scale(1.05);
+}
+
+.project-card:hover .project-image1::before {
+    opacity: 1;
+}
+
+.project-image2 {
+    width: 100%;
+    height: 200px;
+    background: #EEEEEE;
+    background-image: url(../SOURCES/IMAGES/laliga_fantasy_simulator_interfaz.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-image2 {
+    transform: scale(1.05);
+}
+
+.project-card:hover .project-image2::before {
+    opacity: 1;
+}
+
+.project-image3 {
+    width: 100%;
+    height: 200px;
+    background: white;
+    background-image: url(../SOURCES/IMAGES/interfaz_FitBreak.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-image3 {
+    transform: scale(1.05);
+}
+
+.project-card:hover .project-image3::before {
+    opacity: 1;
+}
+
+.project-image4 {
+    width: 100%;
+    height: 200px;
+    background: white;
+    background-image: url(../SOURCES/IMAGES/FitBreak_logo.png);
+    background-size: 30% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image4::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-image4 {
+    transform: scale(1.05);
+}
+
+.project-card:hover .project-image4::before {
+    opacity: 1;
 }
 
 .project-content {
@@ -381,7 +521,6 @@
     font-size: 1.5rem;
     margin-bottom: 15px;
     color: #111;
-    /* línea decorativa quitada */
 }
 
 .tech-tags {
