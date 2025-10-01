@@ -93,7 +93,7 @@
     animation: fadeInUp 0.8s ease forwards;
 }
 
-/* Animación en cascada para las tarjetas */
+/* Cascading animation for cards */
 .cert-card:nth-child(1) { animation-delay: 0.6s; }
 .cert-card:nth-child(2) { animation-delay: 0.7s; }
 .cert-card:nth-child(3) { animation-delay: 0.8s; }

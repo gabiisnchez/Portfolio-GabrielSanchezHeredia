@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Smooth scrolling para navegación
+    // Smooth scrolling for nav
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener("click", function (e) {
             e.preventDefault();
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Intersection Observer para animaciones
+    // Intersection Observer for animations
     const observerOptions = {
         threshold: 0.1,
         rootMargin: "0px 0px -100px 0px"
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-// Función para scroll suave al siguiente section
+// Function for smooth scrolling to the next section
 function scrollToNext() {
     const aboutSection = document.getElementById("about");
     if (aboutSection) {
@@ -55,7 +55,7 @@ function scrollToNext() {
     }
 }
 
-// Pausar animación del carrusel al hacer hover
+// Pause carousel animation on hover
 const carouselTrack = document.querySelector(".carousel-track");
 if (carouselTrack) {
     carouselTrack.addEventListener("mouseenter", () => {
