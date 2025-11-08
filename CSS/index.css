@@ -365,10 +365,11 @@
 .project-image1 {
     width: 100%;
     height: 200px;
-    background: whitesmoke;
-    background-image: url(../SOURCES/IMAGES/blank_urban_index.png);
-    background-size: cover;
+    background: #EEEEEE;
+    background-image: url(../SOURCES/IMAGES/laliga_fantasy_simulator_interfaz.png);
+    background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -402,11 +403,10 @@
 .project-image2 {
     width: 100%;
     height: 200px;
-    background: #EEEEEE;
-    background-image: url(../SOURCES/IMAGES/laliga_fantasy_simulator_interfaz.png);
-    background-size: contain;
+    background: whitesmoke;
+    background-image: url(../SOURCES/IMAGES/pokedex.png);
+    background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
